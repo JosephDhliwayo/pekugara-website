@@ -60,7 +60,7 @@ export default function Contact() {
       setForm({ name: '', email: '', message: '' })
     } catch (err) {
       console.error('EmailJS error:', err)
-      setError('Failed to send message. Please try again or email us directly at support@pekugara.com')
+      setError(`Error: ${err?.text || err?.message || JSON.stringify(err)}`)
     } finally {
       setSending(false)
     }
