@@ -24,7 +24,7 @@ export default function Hero({ onStoreClick }) {
         <div className="hero-content">
           <div className="badge">
             <span className="badge-dot" />
-            Now available on iOS
+            Coming Soon on All Platforms
           </div>
 
           <h1 className="hero-headline">
