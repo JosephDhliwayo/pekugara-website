@@ -44,15 +44,22 @@ export default function Contact() {
     setSending(true)
     setError('')
     try {
-      await emailjs.sendForm(
+      await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
-        formRef.current,
+        {
+          from_name:    form.name,
+          from_email:   form.email,
+          message:      form.message,
+          to_email:     'support@pekugara.com',
+          reply_to:     form.email,
+        },
         EMAILJS_PUBLIC_KEY
       )
       setSent(true)
       setForm({ name: '', email: '', message: '' })
     } catch (err) {
+      console.error('EmailJS error:', err)
       setError('Failed to send message. Please try again or email us directly at support@pekugara.com')
     } finally {
       setSending(false)
