@@ -48,11 +48,11 @@ export default function Contact() {
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         {
-          from_name:    form.name,
-          from_email:   form.email,
-          message:      form.message,
-          to_email:     'support@pekugara.com',
-          reply_to:     form.email,
+          title:     'Pekugara Website Enquiry',
+          name:      form.name,
+          email:     form.email,
+          message:   form.message,
+          from_name: form.name,
         },
         EMAILJS_PUBLIC_KEY
       )
