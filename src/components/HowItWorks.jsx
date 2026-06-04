@@ -1,3 +1,17 @@
+const StudentIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+  </svg>
+)
+
+const LandlordIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+    <polyline points="9 22 9 12 15 12 15 22"/>
+  </svg>
+)
+
 const STUDENT_STEPS = [
   { num: '01', title: 'Create an account',     desc: 'Sign up as a student with your university email in under a minute.' },
   { num: '02', title: 'Search listings',        desc: 'Browse hundreds of verified properties near your campus using smart filters.' },
@@ -21,7 +35,7 @@ export default function HowItWorks() {
         </div>
         <div className="how-cols">
           <div className="how-col reveal-left">
-            <span className="col-badge">🎓 For Students</span>
+            <span className="col-badge"><StudentIcon /> For Students</span>
             {STUDENT_STEPS.map((s, i) => (
               <div key={s.num} className={`step reveal delay-${i + 1}`}>
                 <span className="step-num">{s.num}</span>
@@ -31,7 +45,7 @@ export default function HowItWorks() {
           </div>
           <div className="how-divider" />
           <div className="how-col reveal-right">
-            <span className="col-badge">🏠 For Landlords</span>
+            <span className="col-badge"><LandlordIcon /> For Landlords</span>
             {LANDLORD_STEPS.map((s, i) => (
               <div key={s.num} className={`step reveal delay-${i + 1}`}>
                 <span className="step-num">{s.num}</span>

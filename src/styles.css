@@ -564,14 +564,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .how-cols { display: flex; gap: 40px; flex-wrap: wrap; justify-content: center; }
 .how-col { flex: 1; min-width: 260px; max-width: 440px; }
 .col-badge {
-  display: inline-block;
+  display: inline-flex; align-items: center; gap: 8px;
   background: rgba(45,204,122,0.1);
   border: 1px solid rgba(45,204,122,0.25);
   color: var(--primary); font-weight: 700; font-size: 14px;
   padding: 8px 16px; border-radius: 20px; margin-bottom: 28px;
-  transition: background 0.2s, transform 0.2s;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
 }
-.col-badge:hover { background: rgba(45,204,122,0.2); transform: scale(1.03); }
+.col-badge:hover { background: rgba(45,204,122,0.2); transform: scale(1.03); box-shadow: 0 4px 16px rgba(45,204,122,0.15); }
 .how-divider { width: 1px; background: var(--border); align-self: stretch; }
 .step {
   display: flex; gap: 16px; margin-bottom: 28px; align-items: flex-start;
