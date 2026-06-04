@@ -22,11 +22,6 @@ export default function Hero({ onStoreClick }) {
 
       <div className="hero-inner">
         <div className="hero-content">
-          <div className="badge">
-            <span className="badge-dot" />
-            Now available on iOS
-          </div>
-
           <h1 className="hero-headline">
             Find Student Housing{' '}
             <span className="highlight">Near Your Campus</span>
