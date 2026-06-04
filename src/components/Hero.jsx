@@ -15,7 +15,7 @@ const PlayIcon = () => (
 
 const PRICES = [120, 85, 150]
 
-export default function Hero() {
+export default function Hero({ onStoreClick }) {
   return (
     <section id="home" className="hero">
       <div className="hero-glow" />
@@ -39,12 +39,12 @@ export default function Hero() {
           </p>
 
           <div className="hero-actions">
-            <a href={APPLE_STORE_URL} className="btn-store-ios" target="_blank" rel="noreferrer">
+            <button className="btn-store-ios" onClick={() => onStoreClick('ios')}>
               <AppleIcon /> App Store
-            </a>
-            <a href={PLAY_STORE_URL} className="btn-store-android" target="_blank" rel="noreferrer">
+            </button>
+            <button className="btn-store-android" onClick={() => onStoreClick('android')}>
               <PlayIcon /> Google Play
-            </a>
+            </button>
             <a href="#how" className="btn-learn">How it works ↓</a>
           </div>
 

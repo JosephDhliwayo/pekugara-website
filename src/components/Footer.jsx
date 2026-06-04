@@ -14,7 +14,7 @@ const PlayIcon = () => (
   </svg>
 )
 
-export default function Footer({ onEulaClick, onTermsClick }) {
+export default function Footer({ onEulaClick, onTermsClick, onStoreClick }) {
   return (
     <footer className="footer">
       <div className="footer-inner">
@@ -26,12 +26,12 @@ export default function Footer({ onEulaClick, onTermsClick }) {
             </div>
             <p>Zimbabwe's trusted student housing platform. Find your place to stay.</p>
             <div className="store-btns">
-              <a href={APPLE_STORE_URL} className="footer-btn-ios" target="_blank" rel="noreferrer">
+              <button className="footer-btn-ios" onClick={() => onStoreClick('ios')}>
                 <AppleIcon /> App Store
-              </a>
-              <a href={PLAY_STORE_URL} className="footer-btn-android" target="_blank" rel="noreferrer">
+              </button>
+              <button className="footer-btn-android" onClick={() => onStoreClick('android')}>
                 <PlayIcon /> Google Play
-              </a>
+              </button>
             </div>
           </div>
 

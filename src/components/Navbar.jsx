@@ -16,7 +16,7 @@ const PlayIcon = () => (
   </svg>
 )
 
-export default function Navbar() {
+export default function Navbar({ onStoreClick }) {
   const [open, setOpen] = useState(false)
 
   return (
@@ -34,12 +34,12 @@ export default function Navbar() {
         </div>
 
         <div className="nav-btns">
-          <a href={APPLE_STORE_URL} className="btn-ios" target="_blank" rel="noreferrer">
+          <button className="btn-ios" onClick={() => onStoreClick('ios')}>
             <AppleIcon /> iOS
-          </a>
-          <a href={PLAY_STORE_URL} className="btn-android" target="_blank" rel="noreferrer">
+          </button>
+          <button className="btn-android" onClick={() => onStoreClick('android')}>
             <PlayIcon /> Android
-          </a>
+          </button>
         </div>
 
         <button className={`burger${open ? ' open' : ''}`} onClick={() => setOpen(!open)} aria-label="Menu">
@@ -55,12 +55,12 @@ export default function Navbar() {
             <a key={href} href={href} className="mobile-link" onClick={() => setOpen(false)}>{label}</a>
           ))}
           <div className="mobile-store-btns">
-            <a href={APPLE_STORE_URL} className="mobile-btn-ios" target="_blank" rel="noreferrer">
+            <button className="mobile-btn-ios" onClick={() => { setOpen(false); onStoreClick('ios') }}>
               <AppleIcon /> Download on the App Store
-            </a>
-            <a href={PLAY_STORE_URL} className="mobile-btn-android" target="_blank" rel="noreferrer">
+            </button>
+            <button className="mobile-btn-android" onClick={() => { setOpen(false); onStoreClick('android') }}>
               <PlayIcon /> Get it on Google Play
-            </a>
+            </button>
           </div>
         </div>
       )}

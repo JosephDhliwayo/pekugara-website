@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import './styles.css'
-import EulaPage   from './components/EulaPage'
+import EulaPage      from './components/EulaPage'
+import ComingSoonPage from './components/ComingSoonPage'
 import TermsPage  from './components/TermsPage'
 import Navbar     from './components/Navbar'
 import Hero       from './components/Hero'
@@ -30,8 +31,9 @@ const RINGS = [
 
 export default function App() {
   const progressRef = useRef(null)
-  const [showEula, setShowEula]   = useState(false)
-  const [showTerms, setShowTerms] = useState(false)
+  const [showEula,      setShowEula]      = useState(false)
+  const [showTerms,     setShowTerms]     = useState(false)
+  const [storePlatform, setStorePlatform] = useState(null)
 
   useEffect(() => {
     // Scroll progress
@@ -179,18 +181,23 @@ export default function App() {
       {/* Dot grid */}
       <div className="dot-grid" aria-hidden="true" />
 
-      {showEula  && <EulaPage  onClose={() => setShowEula(false)}  />}
-      {showTerms && <TermsPage onClose={() => setShowTerms(false)} />}
+      {showEula      && <EulaPage      onClose={() => setShowEula(false)}      />}
+      {showTerms     && <TermsPage     onClose={() => setShowTerms(false)}     />}
+      {storePlatform && <ComingSoonPage platform={storePlatform} onClose={() => setStorePlatform(null)} />}
 
-      <Navbar />
+      <Navbar onStoreClick={p => setStorePlatform(p)} />
       <main>
-        <Hero />
+        <Hero onStoreClick={p => setStorePlatform(p)} />
         <Features />
         <HowItWorks />
         <About />
         <Contact />
       </main>
-      <Footer onEulaClick={() => setShowEula(true)} onTermsClick={() => setShowTerms(true)} />
+      <Footer
+        onEulaClick={() => setShowEula(true)}
+        onTermsClick={() => setShowTerms(true)}
+        onStoreClick={p => setStorePlatform(p)}
+      />
     </>
   )
 }
