@@ -1,4 +1,9 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import emailjs from '@emailjs/browser'
+
+const EMAILJS_SERVICE_ID  = 'service_055z53h'
+const EMAILJS_TEMPLATE_ID = 'template_vwl7maw'
+const EMAILJS_PUBLIC_KEY  = 'Q1R0deRNOUiljKr3A'
 
 const EmailIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2dcc7a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -6,14 +11,12 @@ const EmailIcon = () => (
     <polyline points="22,6 12,13 2,6"/>
   </svg>
 )
-
 const LocationIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2dcc7a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
     <circle cx="12" cy="10" r="3"/>
   </svg>
 )
-
 const ClockIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2dcc7a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <circle cx="12" cy="12" r="10"/>
@@ -28,11 +31,33 @@ const CONTACT_ITEMS = [
 ]
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
-  const [sent, setSent] = useState(false)
+  const formRef = useRef(null)
+  const [form, setForm]       = useState({ name: '', email: '', message: '' })
+  const [sent, setSent]       = useState(false)
+  const [sending, setSending] = useState(false)
+  const [error, setError]     = useState('')
 
   const handleChange = e => setForm(p => ({ ...p, [e.target.name]: e.target.value }))
-  const handleSubmit = e => { e.preventDefault(); setSent(true) }
+
+  const handleSubmit = async e => {
+    e.preventDefault()
+    setSending(true)
+    setError('')
+    try {
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        EMAILJS_PUBLIC_KEY
+      )
+      setSent(true)
+      setForm({ name: '', email: '', message: '' })
+    } catch (err) {
+      setError('Failed to send message. Please try again or email us directly at support@pekugara.com')
+    } finally {
+      setSending(false)
+    }
+  }
 
   return (
     <section id="contact" className="contact">
@@ -60,26 +85,55 @@ export default function Contact() {
               <div className="success-icon">✅</div>
               <h3>Message sent!</h3>
               <p>We'll get back to you within 24 hours.</p>
-              <button className="btn-reset" onClick={() => { setForm({ name: '', email: '', message: '' }); setSent(false) }}>
+              <button className="btn-reset" onClick={() => setSent(false)}>
                 Send another message
               </button>
             </div>
           ) : (
-            <form className="form" onSubmit={handleSubmit}>
-              {[
-                { name: 'name',  label: 'Full name',     type: 'text',  ph: 'Tatenda Moyo' },
-                { name: 'email', label: 'Email address', type: 'email', ph: 'tatenda@uz.ac.zw' },
-              ].map(f => (
-                <div key={f.name} className="form-group">
-                  <label>{f.label}</label>
-                  <input className="form-input" type={f.type} name={f.name} placeholder={f.ph} value={form[f.name]} onChange={handleChange} required />
-                </div>
-              ))}
+            <form ref={formRef} className="form" onSubmit={handleSubmit}>
+              <div className="form-group">
+                <label>Full name</label>
+                <input
+                  className="form-input"
+                  type="text"
+                  name="name"
+                  placeholder="Tatenda Moyo"
+                  value={form.name}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+              <div className="form-group">
+                <label>Email address</label>
+                <input
+                  className="form-input"
+                  type="email"
+                  name="email"
+                  placeholder="tatenda@uz.ac.zw"
+                  value={form.email}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
               <div className="form-group">
                 <label>Message</label>
-                <textarea className="form-input" name="message" placeholder="How can we help?" value={form.message} onChange={handleChange} required />
+                <textarea
+                  className="form-input"
+                  name="message"
+                  placeholder="How can we help?"
+                  value={form.message}
+                  onChange={handleChange}
+                  required
+                />
               </div>
-              <button type="submit" className="btn-submit">Send Message →</button>
+
+              {error && (
+                <p style={{ color: '#ef4444', fontSize: 13, marginTop: -8 }}>{error}</p>
+              )}
+
+              <button type="submit" className="btn-submit" disabled={sending}>
+                {sending ? 'Sending…' : 'Send Message →'}
+              </button>
             </form>
           )}
         </div>
