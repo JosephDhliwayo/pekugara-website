@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 
 const EMAILJS_SERVICE_ID  = 'service_055z53h'
@@ -33,6 +33,10 @@ const CONTACT_ITEMS = [
 export default function Contact() {
   const formRef = useRef(null)
   const [form, setForm]       = useState({ name: '', email: '', message: '' })
+
+  useEffect(() => {
+    emailjs.init(EMAILJS_PUBLIC_KEY)
+  }, [])
   const [sent, setSent]       = useState(false)
   const [sending, setSending] = useState(false)
   const [error, setError]     = useState('')
