@@ -1,4 +1,4 @@
-const APPLE_STORE_URL = '#'
+const APPLE_STORE_URL = 'https://apps.apple.com/app/pekugara/id6771945941'
 const PLAY_STORE_URL  = '#'
 
 const AppleIcon = () => (
@@ -26,9 +26,9 @@ export default function Footer({ onEulaClick, onTermsClick, onStoreClick }) {
             </div>
             <p>Zimbabwe's trusted student housing platform. Find your place to stay.</p>
             <div className="store-btns">
-              <button className="footer-btn-ios" onClick={() => onStoreClick('ios')}>
+              <a className="footer-btn-ios" href={APPLE_STORE_URL} target="_blank" rel="noopener noreferrer">
                 <AppleIcon /> App Store
-              </button>
+              </a>
               <button className="footer-btn-android" onClick={() => onStoreClick('android')}>
                 <PlayIcon /> Google Play
               </button>

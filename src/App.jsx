@@ -185,9 +185,9 @@ export default function App() {
       {showTerms     && <TermsPage     onClose={() => setShowTerms(false)}     />}
       {storePlatform && <ComingSoonPage platform={storePlatform} onClose={() => setStorePlatform(null)} />}
 
-      <Navbar onStoreClick={p => setStorePlatform(p)} />
+      <Navbar onStoreClick={p => p === 'ios' ? window.open('https://apps.apple.com/app/pekugara/id6771945941', '_blank', 'noopener') : setStorePlatform(p)} />
       <main>
-        <Hero onStoreClick={p => setStorePlatform(p)} />
+        <Hero onStoreClick={p => p === 'ios' ? window.open('https://apps.apple.com/app/pekugara/id6771945941', '_blank', 'noopener') : setStorePlatform(p)} />
         <Features />
         <HowItWorks />
         <About />
@@ -196,7 +196,7 @@ export default function App() {
       <Footer
         onEulaClick={() => setShowEula(true)}
         onTermsClick={() => setShowTerms(true)}
-        onStoreClick={p => setStorePlatform(p)}
+        onStoreClick={p => p === 'ios' ? window.open('https://apps.apple.com/app/pekugara/id6771945941', '_blank', 'noopener') : setStorePlatform(p)}
       />
     </>
   )
