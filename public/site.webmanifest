@@ -1,0 +1,22 @@
+{
+  "name": "Pekugara – Student Housing Zimbabwe",
+  "short_name": "Pekugara",
+  "description": "Find verified student accommodation near your university in Zimbabwe.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d1117",
+  "theme_color": "#6e40c9",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

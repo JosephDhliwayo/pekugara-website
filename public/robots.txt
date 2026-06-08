@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pekugara.com/sitemap.xml
