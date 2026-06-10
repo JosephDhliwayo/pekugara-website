@@ -1428,8 +1428,13 @@ textarea.form-input { min-height: 120px; resize: vertical; }
   animation: daiLineDraw 1.8s ease forwards infinite;
 }
 .dai-line.l1 { animation-delay: 0s; }
-.dai-line.l2 { animation-delay: 0.25s; }
-.dai-line.l3 { animation-delay: 0.5s; }
+.dai-line.l2 { animation-delay: 0.2s; }
+.dai-line.l3 { animation-delay: 0.4s; }
+.dai-line.l4 { animation-delay: 0.6s; }
+.dai-line.l5 { animation-delay: 0.1s; }
+.dai-line.l6 { animation-delay: 0.3s; }
+.dai-line.l7 { animation-delay: 0.5s; }
+.dai-line.l8 { animation-delay: 0.7s; }
 .dai-spark {
   position: absolute;
   color: #2dcc7a;
