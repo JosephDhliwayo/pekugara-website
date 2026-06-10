@@ -1137,6 +1137,22 @@ textarea.form-input { min-height: 120px; resize: vertical; }
 .docs-logo { width: 48px; height: 48px; border-radius: 12px; }
 .docs-title-wrap h1 { font-size: 24px; font-weight: 700; margin-bottom: 4px; }
 .docs-title-wrap p { color: var(--muted); font-size: 14px; }
+.docs-download-btn {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: #0a3320;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: opacity var(--transition);
+  white-space: nowrap;
+}
+.docs-download-btn:hover { opacity: 0.85; }
 
 .docs-body {
   display: flex;

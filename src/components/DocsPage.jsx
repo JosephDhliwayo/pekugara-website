@@ -22,6 +22,13 @@ export default function DocsPage() {
             <h1>User Documentation</h1>
             <p>Version 1.0.0 — Student housing, simplified.</p>
           </div>
+          <a
+            href="/pekugara-user-documentation.pdf"
+            download="Pekugara-User-Documentation.pdf"
+            className="docs-download-btn"
+          >
+            ⬇ Download PDF
+          </a>
         </div>
       </div>
 
