@@ -45,7 +45,8 @@ const TABS = [
 ]
 
 const MILESTONES = [
-  { year: '2025', event: 'Pekugara founded in Harare' },
+  { year: '2021', event: 'The idea is born — originally envisioned as a WhatsApp chatbot for student housing' },
+  { year: '2025', event: 'Pekugara reimagined as a full mobile platform and founded in Harare' },
   { year: '2026', event: 'Launched on iOS App Store' },
   { year: '2026', event: '500+ listings across 10 cities' },
   { year: '2026', event: '2,000+ students onboarded' },
@@ -71,11 +72,12 @@ export default function About() {
           <p className="eyebrow">Our Story</p>
           <h2>Built for Zimbabwean students</h2>
 
-          <p>Finding student accommodation in Zimbabwe is hard. Listings are scattered across WhatsApp groups, Facebook pages, and word of mouth — making it stressful, slow, and often unsafe.</p>
+          <p>The idea came in 2021 — born out of frustration with how scattered student housing was across WhatsApp groups and Facebook pages. The original vision was a WhatsApp chatbot to simplify the search.</p>
           <p>
+            Years of refinement turned that chatbot idea into a full platform.
             The name <strong className="about-name">Pekugara</strong> means{' '}
-            <em className="about-em">"a place to stay"</em> in Shona.
-            That's exactly what we're here to help every student find.
+            <em className="about-em">"a place to stay"</em> in Shona —
+            and that's exactly what we help every Zimbabwean student find.
           </p>
 
           {/* Stats row */}
