@@ -48,6 +48,18 @@ export default function Hero({ onStoreClick }) {
             <a href="#how" className="btn-learn">How it works ↓</a>
           </div>
 
+          <a href="/docs" className="hero-docs-cta">
+            <span className="hero-docs-cta-inner">
+              <span className="hero-docs-cta-pulse" />
+              <span className="hero-docs-cta-icon">📚</span>
+              <span className="hero-docs-cta-text">
+                <strong>Read the User Documentation</strong>
+                <span>Step-by-step guide · Free download</span>
+              </span>
+              <span className="hero-docs-cta-arrow">→</span>
+            </span>
+          </a>
+
           <div className="hero-stats">
             <div className="stat">
               <span className="stat-num">500+</span>

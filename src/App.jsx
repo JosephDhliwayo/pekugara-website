@@ -149,9 +149,29 @@ export default function App() {
     }
   }, [])
 
+  // Push body down to make room for the fixed banner
+  useEffect(() => {
+    document.body.classList.add('has-docs-banner')
+    return () => document.body.classList.remove('has-docs-banner')
+  }, [])
+
   return (
     <>
       <div ref={progressRef} className="scroll-progress" />
+
+      {/* Docs announcement banner — very top */}
+      <a href="/docs" className="docs-banner">
+        <span className="docs-banner-link">
+          <span className="docs-banner-icon">📚</span>
+          <span className="docs-banner-badge">NEW</span>
+          <span className="docs-banner-text">
+            <strong>User Documentation</strong> is live — learn how to use Pekugara
+          </span>
+          <span className="docs-banner-cta">
+            Click me <span className="docs-banner-arrow">→</span>
+          </span>
+        </span>
+      </a>
 
       {/* Background orbs */}
       <div className="bg-orbs" aria-hidden="true">

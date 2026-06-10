@@ -31,6 +31,7 @@ export default function Navbar({ onStoreClick }) {
           {[['#home','Home'],['#features','Features'],['#how','How It Works'],['#about','About'],['#contact','Contact']].map(([href,label]) => (
             <a key={href} href={href} className="nav-link">{label}</a>
           ))}
+          <a href="/docs" className="nav-link nav-link-docs">📚 User Docs</a>
         </div>
 
         <div className="nav-btns">
@@ -54,6 +55,7 @@ export default function Navbar({ onStoreClick }) {
           {[['#home','Home'],['#features','Features'],['#how','How It Works'],['#about','About'],['#contact','Contact']].map(([href,label]) => (
             <a key={href} href={href} className="mobile-link" onClick={() => setOpen(false)}>{label}</a>
           ))}
+          <a href="/docs" className="mobile-link mobile-link-docs" onClick={() => setOpen(false)}>📚 User Documentation</a>
           <div className="mobile-store-btns">
             <button className="mobile-btn-ios" onClick={() => { setOpen(false); onStoreClick('ios') }}>
               <AppleIcon /> Download on the App Store
