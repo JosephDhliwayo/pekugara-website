@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import './App.css'
 import './styles.css'
+import DocsAnimIcon  from './components/DocsAnimIcon'
 import EulaPage      from './components/EulaPage'
 import ComingSoonPage from './components/ComingSoonPage'
 import DocsPage       from './components/DocsPage'
@@ -162,7 +163,7 @@ export default function App() {
       {/* Docs announcement banner — very top */}
       <a href="/docs" className="docs-banner">
         <span className="docs-banner-link">
-          <span className="docs-banner-icon">📚</span>
+          <DocsAnimIcon size={22} />
           <span className="docs-banner-badge">NEW</span>
           <span className="docs-banner-text">
             <strong>User Documentation</strong> is live — learn how to use Pekugara

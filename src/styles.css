@@ -1364,7 +1364,7 @@ textarea.form-input { min-height: 120px; resize: vertical; }
   width: 100%;
 }
 .docs-banner-link:hover .docs-banner-cta { transform: scale(1.06); }
-.docs-banner-icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+.docs-banner-icon { line-height: 1; flex-shrink: 0; }
 .docs-banner-text {
   font-size: 13.5px;
   font-weight: 500;
@@ -1406,6 +1406,63 @@ textarea.form-input { min-height: 120px; resize: vertical; }
   .docs-banner-badge { display: none; }
   .docs-banner-link { gap: 8px; }
 }
+
+/* ── Docs Animated Icon ──────────────────────────────── */
+@keyframes daiBob {
+  0%, 100% { transform: translateY(0) rotate(-4deg); }
+  50%       { transform: translateY(-6px) rotate(4deg); }
+}
+@keyframes daiGlow {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50%       { transform: scale(1.5); opacity: 0; }
+}
+@keyframes daiLineDraw {
+  0%   { stroke-dashoffset: 20; opacity: 0.3; }
+  60%  { stroke-dashoffset: 0;  opacity: 1; }
+  100% { stroke-dashoffset: 0;  opacity: 1; }
+}
+@keyframes daiSpark {
+  0%   { transform: translate(0,0) scale(0.5); opacity: 1; }
+  100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; }
+}
+
+.docs-anim-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  animation: daiBob 2.4s ease-in-out infinite;
+}
+.dai-glow {
+  position: absolute;
+  width: var(--sz, 32px);
+  height: var(--sz, 32px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(45,204,122,0.7) 0%, transparent 70%);
+  animation: daiGlow 2s ease-in-out infinite;
+  pointer-events: none;
+}
+.dai-svg { display: block; position: relative; z-index: 1; filter: drop-shadow(0 0 6px rgba(45,204,122,0.5)); }
+.dai-line {
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
+  animation: daiLineDraw 1.8s ease forwards infinite;
+}
+.dai-line.l1 { animation-delay: 0s; }
+.dai-line.l2 { animation-delay: 0.25s; }
+.dai-line.l3 { animation-delay: 0.5s; }
+.dai-spark {
+  position: absolute;
+  color: #2dcc7a;
+  font-size: 10px;
+  z-index: 2;
+  animation: daiSpark 1.6s ease-out infinite;
+}
+.dai-spark.sp1 { top: 2px;  right: 0px; --tx:  8px; --ty: -10px; animation-delay: 0s; }
+.dai-spark.sp2 { bottom: 8px; left: 0px; --tx: -8px; --ty:  8px;  animation-delay: 0.5s; }
+.dai-spark.sp3 { top: 6px;  left: 2px;  --tx: -6px; --ty: -8px;  animation-delay: 1s;   font-size: 8px; }
+.dai-spark.sp4 { bottom: 4px; right: 2px; --tx: 6px; --ty: 6px;  animation-delay: 1.2s; font-size: 14px; }
 
 /* ── Navbar Docs Link ────────────────────────────────── */
 .nav-link-docs {
@@ -1474,7 +1531,7 @@ textarea.form-input { min-height: 120px; resize: vertical; }
   opacity: 0;
   animation: heroPulse 2s ease-out infinite;
 }
-.hero-docs-cta-icon { font-size: 26px; line-height: 1; flex-shrink: 0; }
+.hero-docs-cta-icon { line-height: 1; flex-shrink: 0; }
 .hero-docs-cta-text {
   display: flex;
   flex-direction: column;

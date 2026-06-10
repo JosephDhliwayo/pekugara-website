@@ -1,3 +1,5 @@
+import DocsAnimIcon from './DocsAnimIcon'
+
 const APPLE_STORE_URL = '#'
 const PLAY_STORE_URL  = '#'
 
@@ -51,7 +53,7 @@ export default function Hero({ onStoreClick }) {
           <a href="/docs" className="hero-docs-cta">
             <span className="hero-docs-cta-inner">
               <span className="hero-docs-cta-pulse" />
-              <span className="hero-docs-cta-icon">📚</span>
+              <DocsAnimIcon size={38} />
               <span className="hero-docs-cta-text">
                 <strong>Read the User Documentation</strong>
                 <span>Step-by-step guide · Free download</span>
