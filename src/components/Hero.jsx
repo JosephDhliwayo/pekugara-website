@@ -47,7 +47,6 @@ export default function Hero({ onStoreClick }) {
             <button className="btn-store-android" onClick={() => onStoreClick('android')}>
               <PlayIcon /> Google Play
             </button>
-            <a href="#how" className="btn-learn">How it works ↓</a>
           </div>
 
           <a href="/docs" className="hero-docs-cta">
