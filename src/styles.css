@@ -1538,11 +1538,26 @@ textarea.form-input { min-height: 120px; resize: vertical; }
 }
 
 /* ── Banner + nav offset ─────────────────────────────── */
-/* Body shifts down to clear the fixed banner */
+/* Desktop: banner is fixed, body needs top padding to compensate */
 body.has-docs-banner { padding-top: 46px; }
-/* Nav must stick BELOW the banner, not behind it */
-body.has-docs-banner .nav { top: 46px; }
+body.has-docs-banner .nav { top: 46px; }   /* nav sticks below the fixed banner */
 body.has-docs-banner .scroll-progress { top: 0; z-index: 9999; }
+
+/* Mobile (≤ 768px): switch banner to normal document flow.
+   This prevents the navbar from hiding behind a variable-height fixed banner.
+   The banner scrolls with the page; the nav sticks at top: 0 as usual. */
+@media (max-width: 768px) {
+  .docs-banner {
+    position: relative;
+    top: auto;
+  }
+  body.has-docs-banner {
+    padding-top: 0;    /* no offset needed — banner is in flow */
+  }
+  body.has-docs-banner .nav {
+    top: 0;            /* nav sticks at viewport top normally */
+  }
+}
 
 /* ── Touch base: kill tap-highlight & double-tap zoom ── */
 a, button,
@@ -1651,25 +1666,19 @@ a, button,
   .docs-toc-link        { font-size: 12.5px; }
 }
 
-/* ── Banner: small phones ────────────────────────────── */
+/* ── Banner: small phones (layout in normal flow, just tighten content) ── */
 @media (max-width: 480px) {
-  .docs-banner-text { white-space: normal; font-size: 12px; }
-  .docs-banner-link { padding: 8px 10px; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  .docs-banner-text { font-size: 12px; white-space: normal; }
+  .docs-banner-link { padding: 9px 12px; gap: 8px; }
   .docs-banner-cta  { font-size: 11.5px; padding: 5px 12px; }
-  body.has-docs-banner { padding-top: 50px; }   /* allow for taller wrapped banner */
-  body.has-docs-banner .nav { top: 50px; }
 }
 @media (max-width: 380px) {
   .docs-banner-badge { display: none; }
   .docs-banner-text  { font-size: 11.5px; }
-  body.has-docs-banner { padding-top: 52px; }
-  body.has-docs-banner .nav { top: 52px; }
 }
 @media (max-width: 320px) {
   .docs-banner-text  { display: none; }
   .docs-banner-link  { padding: 9px 10px; }
-  body.has-docs-banner { padding-top: 44px; }
-  body.has-docs-banner .nav { top: 44px; }
 }
 
 /* ── Hero docs CTA: mobile ───────────────────────────── */
