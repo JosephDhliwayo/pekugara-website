@@ -1082,7 +1082,7 @@ textarea.form-input { min-height: 120px; resize: vertical; }
 }
 .eula-back-btn:hover { transform: translateY(-2px); opacity: 0.88; }
 
-/* ── Responsive ─────────────────────────────────────── */
+/* ── Responsive: layout breakpoints ─────────────────── */
 @media (max-width: 900px) {
   .nav-links, .nav-btns { display: none; }
   .burger { display: flex; }
@@ -1090,7 +1090,7 @@ textarea.form-input { min-height: 120px; resize: vertical; }
 }
 @media (max-width: 600px) {
   .hero { padding: 56px 14px 72px; min-height: auto; }
-  .hero-headline { font-size: 32px; letter-spacing: -1px; }
+  .hero-headline { font-size: clamp(26px, 8vw, 36px); letter-spacing: -1px; }
   .hero-sub { font-size: 15px; margin-bottom: 28px; }
   .hero-actions { flex-direction: column; gap: 10px; }
   .btn-store-ios, .btn-store-android, .btn-learn { justify-content: center; padding: 13px 18px; }
@@ -1111,24 +1111,6 @@ textarea.form-input { min-height: 120px; resize: vertical; }
   .about-stats    { flex-wrap: wrap; }
   .about-stat     { min-width: 45%; }
   .footer-top, .footer-links { gap: 28px; }
-}
-@media (max-width: 360px) {
-  .hero-headline { font-size: 26px; }
-  .hero-sub { font-size: 14px; }
-  .section-header h2, .about-content h2, .contact-left h2 { font-size: 22px; }
-  .nav-inner { padding: 0 12px; height: 54px; }
-  .nav-logo { font-size: 16px; }
-  .hero-stats { flex-direction: column; gap: 10px; }
-  .stat-divider { display: none; }
-  .feature-card { padding: 18px; }
-}
-@media (max-width: 260px) {
-  .hero-headline { font-size: 20px; }
-  .section-header h2, .about-content h2, .contact-left h2 { font-size: 18px; }
-  .nav-logo { font-size: 14px; }
-  .nav-logo-icon { width: 22px; height: 22px; }
-  .btn-store-ios, .btn-store-android { font-size: 13px; padding: 11px 12px; }
-  .footer-links { flex-direction: column; gap: 20px; }
 }
 
 /* ── Docs Page ─────────────────────────────────────────── */
@@ -1327,7 +1309,7 @@ textarea.form-input { min-height: 120px; resize: vertical; }
 }
 .docs-footer a { color: var(--primary); }
 
-/* Responsive docs */
+/* Responsive docs: tablet */
 @media (max-width: 768px) {
   .docs-header { padding: 16px 20px; }
   .docs-body { flex-direction: column; padding: 24px 16px; gap: 24px; }
@@ -1401,11 +1383,7 @@ textarea.form-input { min-height: 120px; resize: vertical; }
   letter-spacing: 0.04em;
   white-space: nowrap;
 }
-@media (max-width: 560px) {
-  .docs-banner-text { display: none; }
-  .docs-banner-badge { display: none; }
-  .docs-banner-link { gap: 8px; }
-}
+/* banner small-screen rules are in the responsive section below */
 
 /* ── Docs Animated Icon ──────────────────────────────── */
 @keyframes daiBob {
@@ -1554,7 +1532,214 @@ textarea.form-input { min-height: 120px; resize: vertical; }
   flex-shrink: 0;
 }
 
-/* push body content down by banner height */
-body.has-docs-banner .scroll-progress { top: 0; }
+/* ── Banner + nav offset ─────────────────────────────── */
+/* Body shifts down to clear the fixed banner */
 body.has-docs-banner { padding-top: 46px; }
+/* Nav must stick BELOW the banner, not behind it */
+body.has-docs-banner .nav { top: 46px; }
+body.has-docs-banner .scroll-progress { top: 0; z-index: 9999; }
+
+/* ── Touch base: kill tap-highlight & double-tap zoom ── */
+a, button,
+.docs-banner-link,
+.hero-docs-cta,
+.mobile-link,
+.docs-download-btn,
+.docs-toc-link,
+.docs-faq-item {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* ── Active (touch press) states ────────────────────── */
+@media (hover: none) {
+  /* Hero store buttons */
+  .btn-store-ios:active,
+  .btn-store-android:active  { transform: scale(0.95) !important; opacity: 0.88; }
+  .btn-learn:active          { transform: scale(0.97) !important; }
+  /* Navbar & mobile menu */
+  .burger:active             { background: var(--surface); }
+  .mobile-link:active        { color: var(--text); padding-left: 6px; }
+  .mobile-btn-ios:active,
+  .mobile-btn-android:active { transform: scale(0.97) !important; opacity: 0.85; }
+  /* Cards */
+  .feature-card:active       { transform: scale(0.98) !important; }
+  /* Docs CTA card */
+  .hero-docs-cta:active .hero-docs-cta-inner {
+    background: rgba(45,204,122,0.22);
+    transform: scale(0.98);
+  }
+  /* Docs download button */
+  .docs-download-btn:active  { opacity: 0.78; transform: scale(0.97); }
+  /* FAQ items */
+  .docs-faq-item:active      { background: rgba(255,255,255,0.04); }
+  /* Banner */
+  .docs-banner:active        { opacity: 0.88; }
+  /* TOC links */
+  .docs-toc-link:active      { color: var(--primary); border-left-color: var(--primary); }
+  /* Contact send button */
+  .btn-submit:active         { transform: scale(0.97) !important; }
+  /* About tab buttons */
+  .about-tab-btn:active      { background: var(--border) !important; }
+}
+
+/* Guaranteed 44 px minimum tap targets on touch screens */
+@media (hover: none) {
+  .mobile-link { min-height: 48px; display: flex; align-items: center; }
+  .mobile-btn-ios,
+  .mobile-btn-android { min-height: 52px; }
+  .btn-store-ios,
+  .btn-store-android,
+  .btn-learn { min-height: 50px; }
+  .docs-toc-link { min-height: 40px; display: flex; align-items: center; }
+  .docs-download-btn { min-height: 50px; }
+  .about-tab-btn { min-height: 46px; }
+  .burger { padding: 12px; }
+}
+
+/* ── Docs page: download button ──────────────────────── */
+/* Desktop: inline in the header row (existing) */
+/* On tablets and below: wrap to its own full-width row */
+@media (max-width: 640px) {
+  .docs-header { padding: 16px; }
+  .docs-title-wrap {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  /* Logo + title group stays side-by-side */
+  .docs-logo { width: 40px; height: 40px; }
+  .docs-title-wrap h1 { font-size: 20px; }
+  /* Download button breaks onto its own full row */
+  .docs-download-btn {
+    flex: 0 0 100%;          /* take full width */
+    margin-left: 0;
+    justify-content: center;
+    padding: 13px 20px;
+    font-size: 15px;
+    border-radius: 12px;
+    letter-spacing: 0.01em;
+  }
+}
+
+/* ── Docs page: small phones (≤ 400 px) ─────────────── */
+@media (max-width: 400px) {
+  .docs-header { padding: 14px 12px; }
+  .docs-body   { padding: 20px 12px; gap: 20px; }
+  .docs-title-wrap h1 { font-size: 18px; }
+  .docs-title-wrap p  { font-size: 12px; }
+  .docs-back          { font-size: 13px; margin-bottom: 12px; }
+  .docs-logo          { width: 36px; height: 36px; border-radius: 10px; }
+
+  .docs-section         { margin-bottom: 40px; padding-bottom: 40px; }
+  .docs-section h2      { font-size: 18px; }
+  .docs-section h3      { font-size: 14px; margin-top: 18px; }
+  .docs-section p,
+  .docs-section li      { font-size: 13.5px; }
+  .docs-note,
+  .docs-warning         { font-size: 13px; padding: 10px 12px; }
+  .docs-table-wrap th,
+  .docs-table-wrap td   { padding: 8px 10px; font-size: 12.5px; }
+  .docs-faq-item        { padding: 14px; }
+  .docs-faq-q           { font-size: 13.5px; }
+  .docs-faq-a           { font-size: 13px; }
+  .docs-toc-title       { font-size: 10px; }
+  .docs-toc-link        { font-size: 12.5px; }
+}
+
+/* ── Banner: small phones ────────────────────────────── */
+@media (max-width: 480px) {
+  .docs-banner-text { white-space: normal; font-size: 12px; }
+  .docs-banner-link { padding: 8px 10px; gap: 8px; flex-wrap: wrap; justify-content: center; }
+  .docs-banner-cta  { font-size: 11.5px; padding: 5px 12px; }
+  body.has-docs-banner { padding-top: 50px; }   /* allow for taller wrapped banner */
+  body.has-docs-banner .nav { top: 50px; }
+}
+@media (max-width: 380px) {
+  .docs-banner-badge { display: none; }
+  .docs-banner-text  { font-size: 11.5px; }
+  body.has-docs-banner { padding-top: 52px; }
+  body.has-docs-banner .nav { top: 52px; }
+}
+@media (max-width: 320px) {
+  .docs-banner-text  { display: none; }
+  .docs-banner-link  { padding: 9px 10px; }
+  body.has-docs-banner { padding-top: 44px; }
+  body.has-docs-banner .nav { top: 44px; }
+}
+
+/* ── Hero docs CTA: mobile ───────────────────────────── */
+@media (max-width: 600px) {
+  .hero-docs-cta        { display: flex; width: 100%; }
+  .hero-docs-cta-inner  { flex: 1; padding: 13px 16px; gap: 12px; }
+  .hero-docs-cta-text strong { font-size: 14px; }
+  .hero-docs-cta-text span   { font-size: 11px; }
+}
+@media (max-width: 360px) {
+  .hero-docs-cta-inner  { padding: 11px 12px; gap: 10px; }
+  .hero-docs-cta-text strong { font-size: 13px; }
+  .hero-docs-cta-arrow  { font-size: 16px; }
+}
+
+/* ── General: 600 px ─────────────────────────────────── */
+@media (max-width: 600px) {
+  /* Hero headline */
+  .hero-headline { font-size: clamp(26px, 8vw, 36px); }
+  /* Contact form full width */
+  .contact-form { gap: 12px; }
+  .form-row      { flex-direction: column; gap: 12px; }
+  /* Footer columns single */
+  .footer-links  { flex-direction: column; gap: 24px; }
+  /* Feature card: slightly smaller padding */
+  .feature-card  { padding: 20px; }
+  /* How-it-works step list */
+  .how-step      { gap: 12px; }
+}
+
+/* ── General: 360 px (Samsung Galaxy A/S series) ──────── */
+@media (max-width: 360px) {
+  /* Navbar */
+  .nav-inner      { padding: 0 10px; height: 52px; }
+  .nav-logo       { font-size: 16px; gap: 6px; }
+  .nav-logo-icon  { width: 26px; height: 26px; }
+  /* Hero */
+  .hero           { padding: 56px 12px 64px; }
+  .hero-headline  { font-size: clamp(22px, 7.5vw, 28px); letter-spacing: -0.5px; }
+  .hero-sub       { font-size: 14px; margin-bottom: 24px; }
+  .hero-actions   { gap: 9px; }
+  .btn-store-ios, .btn-store-android, .btn-learn { font-size: 14px; padding: 13px 16px; }
+  /* Stats */
+  .hero-stats     { flex-direction: column; gap: 10px; align-items: flex-start; }
+  .stat-divider   { display: none; }
+  .stat-num       { font-size: 20px; }
+  /* Sections */
+  .section-header h2,
+  .about-content h2,
+  .contact-left h2 { font-size: clamp(20px, 6.5vw, 26px); }
+  .features, .how, .about, .contact, .footer { padding: 48px 12px; }
+  /* Cards */
+  .feature-card   { padding: 16px; }
+  /* About tabs */
+  .about-tab-btn  { font-size: 11px; padding: 9px 4px; }
+  /* Footer */
+  .footer-top     { flex-direction: column; gap: 20px; }
+  .footer-links   { gap: 20px; }
+}
+
+/* ── General: 280 px (Samsung Galaxy Pocket / oldest) ─── */
+@media (max-width: 280px) {
+  .nav-inner      { padding: 0 8px; height: 48px; }
+  .nav-logo       { font-size: 14px; }
+  .nav-logo-icon  { width: 22px; height: 22px; }
+  .hero           { padding: 44px 10px 52px; }
+  .hero-headline  { font-size: 20px; letter-spacing: 0; }
+  .hero-sub       { font-size: 13px; }
+  .btn-store-ios, .btn-store-android, .btn-learn { font-size: 13px; padding: 11px 12px; }
+  .section-header h2,
+  .about-content h2,
+  .contact-left h2 { font-size: 18px; }
+  .features, .how, .about, .contact, .footer { padding: 36px 10px; }
+  .feature-card   { padding: 14px; }
+  .docs-section h2 { font-size: 16px; }
+  .docs-download-btn { font-size: 13px; padding: 11px 14px; }
+}
 
