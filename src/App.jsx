@@ -3,6 +3,7 @@ import './App.css'
 import './styles.css'
 import EulaPage      from './components/EulaPage'
 import ComingSoonPage from './components/ComingSoonPage'
+import DocsPage       from './components/DocsPage'
 import TermsPage  from './components/TermsPage'
 import Navbar     from './components/Navbar'
 import Hero       from './components/Hero'
@@ -30,6 +31,8 @@ const RINGS = [
 ]
 
 export default function App() {
+  if (window.location.pathname === '/docs') return <DocsPage />
+
   const progressRef = useRef(null)
   const [showEula,      setShowEula]      = useState(false)
   const [showTerms,     setShowTerms]     = useState(false)

@@ -47,6 +47,7 @@ export default function Footer({ onEulaClick, onTermsClick, onStoreClick }) {
               <a href="https://gist.github.com/JosephDhliwayo/1d37d09fb7754fb2f382869d858810d8/raw/21af5483ef5fa597666e3fa83ba6cf7d845c854e/privacy-policy.md" target="_blank" rel="noreferrer">Privacy Policy</a>
               <a href="#" onClick={e => { e.preventDefault(); onTermsClick() }}>Terms of Service</a>
               <a href="#" onClick={e => { e.preventDefault(); onEulaClick() }}>EULA</a>
+              <a href="/docs">User Documentation</a>
             </div>
             <div className="link-col">
               <p className="link-col-title">Support</p>
