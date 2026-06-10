@@ -29,7 +29,7 @@ export default function Navbar({ onStoreClick }) {
         </a>
 
         <div className="nav-links">
-          {[['#home','Home'],['#features','Features'],['#how','How It Works'],['#about','About'],['#contact','Contact']].map(([href,label]) => (
+          {[['#home','Home'],['#features','Features'],['#about','About'],['#contact','Contact']].map(([href,label]) => (
             <a key={href} href={href} className="nav-link">{label}</a>
           ))}
           <a href="/docs" className="nav-link nav-link-docs"><DocsAnimIcon size={18} /> User Docs</a>
@@ -53,7 +53,7 @@ export default function Navbar({ onStoreClick }) {
 
       {open && (
         <div className="mobile-menu">
-          {[['#home','Home'],['#features','Features'],['#how','How It Works'],['#about','About'],['#contact','Contact']].map(([href,label]) => (
+          {[['#home','Home'],['#features','Features'],['#about','About'],['#contact','Contact']].map(([href,label]) => (
             <a key={href} href={href} className="mobile-link" onClick={() => setOpen(false)}>{label}</a>
           ))}
           <a href="/docs" className="mobile-link mobile-link-docs" onClick={() => setOpen(false)}><DocsAnimIcon size={20} /> User Documentation</a>

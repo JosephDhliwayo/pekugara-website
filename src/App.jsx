@@ -9,7 +9,6 @@ import TermsPage  from './components/TermsPage'
 import Navbar     from './components/Navbar'
 import Hero       from './components/Hero'
 import Features   from './components/Features'
-import HowItWorks from './components/HowItWorks'
 import About      from './components/About'
 import Contact    from './components/Contact'
 import Footer     from './components/Footer'
@@ -213,7 +212,6 @@ export default function App() {
       <main>
         <Hero onStoreClick={p => p === 'ios' ? window.open('https://apps.apple.com/app/pekugara/id6771945941', '_blank', 'noopener') : setStorePlatform(p)} />
         <Features />
-        <HowItWorks />
         <About />
         <Contact />
       </main>
