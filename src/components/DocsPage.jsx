@@ -186,7 +186,17 @@ export default function DocsPage() {
             <h3>4.7 Messaging Landlords</h3>
             <p>Once you have paid the booking fee, tap <strong>"Message Landlord"</strong> on any listing's detail screen. All conversations are accessible from the <strong>Chats</strong> tab.</p>
 
-            <h3>4.8 Viewing Your Booking Requests</h3>
+            <h3>4.8 Siyakwamukela AI — Your Housing Assistant</h3>
+            <p>
+              Not sure where to start? Chat with <strong>Siyakwamukela AI</strong>, Pekugara's built-in AI housing
+              assistant. Describe what you're looking for — budget, city, university, amenities — and it will
+              recommend listings that match, based on your conversation.
+            </p>
+            <div className="docs-note">
+              Your messages are only used to generate recommendations during your session and are never used to train AI models. See our <a href="/privacy-policy">Privacy Policy</a> for details.
+            </div>
+
+            <h3>4.9 Viewing Your Booking Requests</h3>
             <p>Go to <strong>Profile → My Viewing Requests</strong> to see all requests and their status:</p>
             <div className="docs-table-wrap">
               <table>

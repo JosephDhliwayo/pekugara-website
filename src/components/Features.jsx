@@ -43,8 +43,19 @@ const BellIcon = () => (
   </svg>
 )
 
+const AIIcon = () => (
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2dcc7a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="3" y="8" width="18" height="12" rx="2"/>
+    <path d="M12 8V4"/><circle cx="12" cy="3" r="1" fill="#2dcc7a" stroke="none"/>
+    <circle cx="8" cy="14" r="1.5" fill="#2dcc7a" stroke="none"/>
+    <circle cx="16" cy="14" r="1.5" fill="#2dcc7a" stroke="none"/>
+    <path d="M9 18h6"/>
+  </svg>
+)
+
 const FEATURES = [
   { Icon: SearchIcon,  title: 'Smart Search',       desc: 'Filter by city, university, price, amenities and distance to campus. Find exactly what you need in seconds.' },
+  { Icon: AIIcon,      title: 'Siyakwamukela AI',   desc: 'Chat with our AI housing assistant to get personalised accommodation recommendations based on what you’re looking for.' },
   { Icon: VerifiedIcon,title: 'Verified Landlords', desc: "Every landlord goes through an identity verification process so you know who you're dealing with." },
   { Icon: ChatIcon,    title: 'In-App Messaging',   desc: 'Chat directly with landlords, ask questions, and arrange viewings — no need to share your phone number.' },
   { Icon: BookingIcon, title: 'Easy Bookings',      desc: 'Book a viewing with a simple $2 fee. Your booking is confirmed instantly and the landlord is notified.' },
