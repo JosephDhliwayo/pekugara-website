@@ -3,7 +3,6 @@ import './App.css'
 import './styles.css'
 import DocsAnimIcon  from './components/DocsAnimIcon'
 import EulaPage      from './components/EulaPage'
-import ComingSoonPage from './components/ComingSoonPage'
 import DocsPage       from './components/DocsPage'
 import TermsPage  from './components/TermsPage'
 import Navbar     from './components/Navbar'
@@ -31,13 +30,18 @@ const RINGS = [
   { size: 700, delay: 2.4, dur: 4 },
 ]
 
+const STORE_URLS = {
+  ios:     'https://apps.apple.com/app/pekugara/id6771945941',
+  android: 'https://play.google.com/store/apps/details?id=com.pekugara.app',
+}
+const handleStoreClick = platform => window.open(STORE_URLS[platform], '_blank', 'noopener')
+
 export default function App() {
   if (window.location.pathname === '/docs') return <DocsPage />
 
   const progressRef = useRef(null)
   const [showEula,      setShowEula]      = useState(false)
   const [showTerms,     setShowTerms]     = useState(false)
-  const [storePlatform, setStorePlatform] = useState(null)
 
   useEffect(() => {
     // Scroll progress
@@ -207,11 +211,10 @@ export default function App() {
 
       {showEula      && <EulaPage      onClose={() => setShowEula(false)}      />}
       {showTerms     && <TermsPage     onClose={() => setShowTerms(false)}     />}
-      {storePlatform && <ComingSoonPage platform={storePlatform} onClose={() => setStorePlatform(null)} />}
 
-      <Navbar onStoreClick={p => p === 'ios' ? window.open('https://apps.apple.com/app/pekugara/id6771945941', '_blank', 'noopener') : setStorePlatform(p)} />
+      <Navbar onStoreClick={handleStoreClick} />
       <main>
-        <Hero onStoreClick={p => p === 'ios' ? window.open('https://apps.apple.com/app/pekugara/id6771945941', '_blank', 'noopener') : setStorePlatform(p)} />
+        <Hero onStoreClick={handleStoreClick} />
         <Features />
         <HowItWorks />
         <About />
@@ -220,7 +223,7 @@ export default function App() {
       <Footer
         onEulaClick={() => setShowEula(true)}
         onTermsClick={() => setShowTerms(true)}
-        onStoreClick={p => p === 'ios' ? window.open('https://apps.apple.com/app/pekugara/id6771945941', '_blank', 'noopener') : setStorePlatform(p)}
+        onStoreClick={handleStoreClick}
       />
     </>
   )
