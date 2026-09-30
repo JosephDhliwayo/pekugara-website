@@ -59,7 +59,7 @@ Managing student tenants and marketing your property can be time-consuming and e
 
 1. Open the Pekugara app.
 2. On the Welcome screen, tap:
-   - **"Find a Room"** — to register as a student.
+   - **"Find a Room"** — to register as a renter (students can optionally add their university for campus-distance search).
    - **"List your property"** — to register as a landlord.
    - **"I already have an account"** — to log in.
 3. Fill in your details:
@@ -224,6 +224,15 @@ Go to **Profile → My Viewing Requests** to see all the requests you have submi
 | **Cancelled** | You or the landlord cancelled the request. |
 
 You can **cancel** a pending request at any time by tapping **Cancel** on the request card.
+
+### 4.10 House & Room Sharing
+
+Already have a place but need a roommate to split rent with? Open the **Sharing** tab to post your own ad or browse ads from others.
+
+- If you have a confirmed booking through Pekugara, your sharing ad is **verified automatically** and goes live immediately.
+- If your place isn't booked through Pekugara, you can still post — your ad is reviewed by our team before it becomes visible to others.
+
+Messaging a sharing ad poster requires the same $2 booking fee as messaging a landlord — one payment unlocks both for 30 days.
 
 ---
 
@@ -469,7 +478,12 @@ A: Block the user immediately from the chat screen (⋮ menu → Block). This re
 ---
 
 **Q: Can I use Pekugara if I am not a student?**
-A: Pekugara is designed specifically for students and landlords serving the student market. General members of the public can register as landlords to list properties, but the platform is optimised for the student housing market in Zimbabwe.
+A: Yes. Pekugara is open to any renter, not just students — the "I'm a student" option during sign-up is optional and only used to unlock campus-distance search.
+
+---
+
+**Q: How does House & Room Sharing work?**
+A: If you already have accommodation and want to split rent, post a sharing ad from the Sharing tab. Ads from renters with a confirmed Pekugara booking go live instantly; ads from anyone else are reviewed by our team first. Messaging a sharing ad poster uses the same $2 booking fee as messaging a landlord.
 
 ---
 

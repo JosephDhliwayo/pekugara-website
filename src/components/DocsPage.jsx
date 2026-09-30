@@ -108,7 +108,7 @@ export default function DocsPage() {
               <li>Open the Pekugara app.</li>
               <li>On the Welcome screen, tap:
                 <ul>
-                  <li><strong>"Find a Room"</strong> — to register as a student.</li>
+                  <li><strong>"Find a Room"</strong> — to register as a renter (students can optionally add their university for campus-distance search).</li>
                   <li><strong>"List your property"</strong> — to register as a landlord.</li>
                   <li><strong>"I already have an account"</strong> — to log in.</li>
                 </ul>
@@ -209,6 +209,20 @@ export default function DocsPage() {
                 </tbody>
               </table>
             </div>
+
+            <h3>4.10 House & Room Sharing</h3>
+            <p>
+              Already have a place but need a roommate to split rent with? Open the <strong>Sharing</strong> tab
+              to post your own ad or browse ads from others. There are two ways to post:
+            </p>
+            <ul>
+              <li>If you have a confirmed booking through Pekugara, your sharing ad is <strong>verified automatically</strong> and goes live immediately.</li>
+              <li>If your place isn't booked through Pekugara, you can still post — your ad is reviewed by our team before it becomes visible to others.</li>
+            </ul>
+            <p>
+              Messaging a sharing ad poster requires the same $2 booking fee as messaging a landlord — one payment
+              unlocks both for 30 days.
+            </p>
           </section>
 
           {/* 5 */}
@@ -344,7 +358,8 @@ export default function DocsPage() {
                 { q: 'Does it cost anything to list my property as a landlord?', a: 'No. Posting listings on Pekugara is completely free for landlords.' },
                 { q: 'How long does admin approval take for a new listing?', a: 'Listings are typically reviewed within 24 hours. You will receive an in-app notification once your listing is approved and live.' },
                 { q: 'What should I do if I experience harassment?', a: 'Block the user immediately from the chat screen (⋮ menu → Block). This removes them from your feed and automatically notifies our moderation team, who will review the case within 24 hours.' },
-                { q: 'Can I use Pekugara if I am not a student?', a: 'Pekugara is designed specifically for students and landlords serving the student market. General members of the public can register as landlords to list properties.' },
+                { q: 'Can I use Pekugara if I am not a student?', a: 'Yes. Pekugara is open to any renter, not just students — the "I\'m a student" option during sign-up is optional and only used to unlock campus-distance search.' },
+                { q: 'How does House & Room Sharing work?', a: 'If you already have accommodation and want to split rent, post a sharing ad from the Sharing tab. Ads from renters with a confirmed Pekugara booking go live instantly; ads from anyone else are reviewed by our team first. Messaging a sharing ad poster uses the same $2 booking fee as messaging a landlord.' },
               ].map(({ q, a }) => (
                 <div key={q} className="docs-faq-item">
                   <p className="docs-faq-q">{q}</p>

@@ -347,7 +347,10 @@ h2('4.6  After Your Booking is Confirmed')
 body('Once a landlord confirms your request, the Home screen switches to a "Housing Confirmed" view showing your property details, the landlord\'s name and phone number, and a direct message button.')
 h2('4.7  Messaging Landlords')
 body('Once the booking fee is paid, tap "Message Landlord" on any listing\'s detail screen. Messages are delivered in real time. All conversations are in the Chats tab. Messages are monitored for guideline violations.')
-h2('4.8  Viewing Your Booking Requests')
+h2('4.8  Siyakwamukela AI — Your Housing Assistant')
+body('Not sure where to start? Chat with Siyakwamukela AI, Pekugara\'s built-in AI housing assistant. Describe what you are looking for — budget, city, university, amenities — and it will recommend listings that match, based on your conversation.')
+note('Your messages are only used to generate recommendations during your session and are never used to train AI models. See the Privacy Policy for details.')
+h2('4.9  Viewing Your Booking Requests')
 body('Go to Profile → My Viewing Requests to track all requests and their current status:')
 const sw = [W * 0.28, W * 0.72]
 tHeader(['Status', 'Meaning'], sw)
@@ -356,6 +359,13 @@ tRow(['Confirmed', 'The landlord accepted your request — you have housing!'], 
 tRow(['Rejected',  'The landlord declined your request. You may apply elsewhere.'], sw, false)
 tRow(['Cancelled', 'You or the landlord cancelled the request.'], sw, true)
 doc.y += 5
+h2('4.10  House & Room Sharing')
+body('Already have a place but need a roommate to split rent with? Open the Sharing tab to post your own ad or browse ads from others.')
+bullet([
+  'If you have a confirmed booking through Pekugara, your sharing ad is verified automatically and goes live immediately.',
+  'If your place isn\'t booked through Pekugara, you can still post — your ad is reviewed by our team before it becomes visible to others.',
+])
+body('Messaging a sharing ad poster requires the same $2 booking fee as messaging a landlord — one payment unlocks both for 30 days.')
 
 // ─── 5 ───────────────────────────────────────────────────
 chip('5', 'For Landlords')

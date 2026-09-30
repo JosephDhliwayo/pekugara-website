@@ -53,11 +53,20 @@ const AIIcon = () => (
   </svg>
 )
 
+const SharingIcon = () => (
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2dcc7a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/>
+    <path d="M2 21v-1a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v1"/>
+    <path d="M15 15.5a4 4 0 0 1 4 4V21"/>
+  </svg>
+)
+
 const FEATURES = [
   { Icon: SearchIcon,  title: 'Smart Search',       desc: 'Filter by city, university, price, amenities and distance to campus. Find exactly what you need in seconds.' },
   { Icon: AIIcon,      title: 'Siyakwamukela AI',   desc: 'Chat with our AI housing assistant to get personalised accommodation recommendations based on what you’re looking for.' },
   { Icon: VerifiedIcon,title: 'Verified Landlords', desc: "Every landlord goes through an identity verification process so you know who you're dealing with." },
   { Icon: ChatIcon,    title: 'In-App Messaging',   desc: 'Chat directly with landlords, ask questions, and arrange viewings — no need to share your phone number.' },
+  { Icon: SharingIcon, title: 'House & Room Sharing', desc: 'Already have a place? Post a sharing ad to split rent with a roommate, or browse ads from others looking to share.' },
   { Icon: BookingIcon, title: 'Easy Bookings',      desc: 'Book a viewing with a simple $2 fee. Your booking is confirmed instantly and the landlord is notified.' },
   { Icon: SafeIcon,    title: 'Safe Community',     desc: 'Report and block abusive users. Our moderation team reviews all reports within 24 hours.' },
   { Icon: BellIcon,    title: 'Real-Time Alerts',   desc: 'Get instant push notifications when a landlord confirms your booking or sends you a message.' },
@@ -70,7 +79,7 @@ export default function Features() {
         <div className="section-header reveal">
           <p className="eyebrow">Why Pekugara</p>
           <h2>Everything you need to find a home</h2>
-          <p>Built specifically for Zimbabwean students and landlords, with features that make finding accommodation fast and stress-free.</p>
+          <p>Built specifically for Zimbabwean renters and landlords, with features that make finding accommodation fast and stress-free.</p>
         </div>
         <div className="features-grid">
           {FEATURES.map(({ Icon, title, desc }, i) => (
