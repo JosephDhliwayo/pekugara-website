@@ -24,7 +24,7 @@ export default function Footer({ onEulaClick, onTermsClick, onStoreClick }) {
               <img src="/icon.png" alt="Pekugara" className="footer-logo-icon" />
               Pekugara
             </div>
-            <p>Zimbabwe's trusted student housing platform. Find your place to stay.</p>
+            <p>Zimbabwe's trusted rental housing platform. Find your place to stay.</p>
             <div className="store-btns">
               <a className="footer-btn-ios" href={APPLE_STORE_URL} target="_blank" rel="noopener noreferrer">
                 <AppleIcon /> App Store

@@ -30,13 +30,13 @@ export default function Hero({ onStoreClick }) {
           </div>
 
           <h1 className="hero-headline">
-            Find Student Housing{' '}
+            Find Rental Housing{' '}
             <span className="highlight">Near Your Campus</span>
           </h1>
 
           <p className="hero-sub">
-            Pekugara connects Zimbabwean students with verified landlords offering
-            affordable, safe accommodation near universities. Browse listings,
+            Pekugara connects Zimbabwean renters with verified landlords offering
+            affordable, safe accommodation across the country. Browse listings,
             chat with landlords, and book viewings — all in one app.
           </p>
 
@@ -69,7 +69,7 @@ export default function Hero({ onStoreClick }) {
             <div className="stat-divider" />
             <div className="stat">
               <span className="stat-num">2000+</span>
-              <span className="stat-label">Students</span>
+              <span className="stat-label">Renters</span>
             </div>
             <div className="stat-divider" />
             <div className="stat">
