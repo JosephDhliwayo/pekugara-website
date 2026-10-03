@@ -30,8 +30,8 @@ export default function Hero({ onStoreClick }) {
           </div>
 
           <h1 className="hero-headline">
-            Find Rental Housing{' '}
-            <span className="highlight">Near Your Campus</span>
+            Find Your Next Home{' '}
+            <span className="highlight">Anywhere in Zimbabwe</span>
           </h1>
 
           <p className="hero-sub">

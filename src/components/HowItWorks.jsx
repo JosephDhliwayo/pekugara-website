@@ -14,7 +14,7 @@ const LandlordIcon = () => (
 
 const STUDENT_STEPS = [
   { num: '01', title: 'Create an account',     desc: 'Sign up as a student with your university email in under a minute.' },
-  { num: '02', title: 'Search listings',        desc: 'Browse hundreds of verified properties near your campus using smart filters.' },
+  { num: '02', title: 'Search listings',        desc: 'Browse hundreds of verified properties near you using smart filters.' },
   { num: '03', title: 'Pay the booking fee',    desc: 'Pay a small $2 fee via EcoCash to unlock messaging and book a viewing.' },
   { num: '04', title: 'Move in',                desc: 'Confirm your viewing, get accepted by the landlord, and move into your new home.' },
 ]
