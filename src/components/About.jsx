@@ -23,23 +23,23 @@ const TABS = [
     label: 'Mission',
     Icon: TargetIcon,
     title: 'Our Mission',
-    desc: 'Make student housing in Zimbabwe accessible, transparent, and safe. We believe every student deserves a secure, affordable place to stay near their university, without the stress of scattered listings and unverified landlords.',
-    highlight: 'Every student deserves a safe home.',
+    desc: 'Make renting in Zimbabwe accessible, transparent, and safe. We believe everyone deserves a secure, affordable place to call home, without the stress of scattered listings and unverified landlords.',
+    highlight: 'Everyone deserves a safe home.',
   },
   {
     key: 'vision',
     label: 'Vision',
     Icon: EyeIcon,
     title: 'Our Vision',
-    desc: 'Become the leading student housing platform across Southern Africa, expanding from Zimbabwe into Zambia, Mozambique, and beyond. We envision a future where finding student accommodation is as easy as ordering food online.',
-    highlight: 'Southern Africa\'s #1 student housing platform.',
+    desc: 'Become the leading rental housing platform across Southern Africa, expanding from Zimbabwe into Zambia, Mozambique, and beyond. We envision a future where finding a place to live is as easy as ordering food online.',
+    highlight: 'Southern Africa\'s #1 rental housing platform.',
   },
   {
     key: 'values',
     label: 'Values',
     Icon: HeartIcon,
     title: 'Our Values',
-    desc: 'Trust, safety, and community are at the heart of everything we do. We verify every landlord, moderate every listing, and stand behind every user. We build with students in mind and improve based on their feedback.',
+    desc: 'Trust, safety, and community are at the heart of everything we do. We verify every landlord, moderate every listing, and stand behind every user. We build with renters in mind and improve based on their feedback.',
     highlight: 'Built with trust. Driven by community.',
   },
 ]
@@ -49,12 +49,12 @@ const MILESTONES = [
   { year: '2025', event: 'Pekugara reimagined as a full mobile platform and founded in Harare' },
   { year: '2026', event: 'Launched on iOS App Store' },
   { year: '2026', event: '500+ listings across 10 cities' },
-  { year: '2026', event: '2,000+ students onboarded' },
+  { year: '2026', event: '2,000+ users onboarded' },
 ]
 
 const STATS = [
   { num: '500+',  label: 'Listings' },
-  { num: '2000+', label: 'Students' },
+  { num: '2000+', label: 'Users' },
   { num: '10+',   label: 'Cities' },
   { num: '100+',  label: 'Landlords' },
 ]
@@ -70,14 +70,14 @@ export default function About() {
         {/* ── Left: Story + Stats + Timeline ── */}
         <div className="about-content reveal-left">
           <p className="eyebrow">Our Story</p>
-          <h2>Built for Zimbabwean students</h2>
+          <h2>Built for Zimbabwean renters</h2>
 
-          <p>The idea came in 2021, born out of frustration with how scattered student housing was across WhatsApp groups and Facebook pages. The original vision was a WhatsApp chatbot to simplify the search.</p>
+          <p>The idea came in 2021, born out of frustration with how scattered student housing was across WhatsApp groups and Facebook pages. The original vision was a WhatsApp chatbot to simplify the search. Today Pekugara serves every renter, not just students.</p>
           <p>
             Years of refinement turned that chatbot idea into a full platform.
             The name <strong className="about-name">Pekugara</strong> means{' '}
             <em className="about-em">"a place to stay"</em> in Shona,
-            and that's exactly what we help every Zimbabwean student find.
+            and that's exactly what we help every Zimbabwean find.
           </p>
 
           {/* Stats row */}
