@@ -837,6 +837,10 @@ textarea.form-input { min-height: 120px; resize: vertical; }
   display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
 }
 .footer-bottom p { font-size: 12px; color: var(--muted); }
+.footer-made { display: inline-flex; align-items: center; gap: 5px; }
+.footer-heart { color: var(--primary); filter: drop-shadow(0 0 4px rgba(45,204,122,0.5)); animation: heartBeat 1.6s ease-in-out infinite; }
+@keyframes heartBeat { 0%, 60%, 100% { transform: scale(1); } 15% { transform: scale(1.22); } 30% { transform: scale(0.95); } 45% { transform: scale(1.12); } }
+@media (prefers-reduced-motion: reduce) { .footer-heart { animation: none; } }
 
 
 /* ── EULA Page ───────────────────────────────────────── */
