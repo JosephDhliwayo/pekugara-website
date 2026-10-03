@@ -28,7 +28,7 @@ export default function DocsPage() {
           <img src="/icon.png" alt="Pekugara" className="docs-logo" />
           <div>
             <h1>User Documentation</h1>
-            <p>Version 1.0.0 — Student housing, simplified.</p>
+            <p>Version 1.0.0 · Student housing, simplified.</p>
           </div>
           <a
             href="/pekugara-user-documentation.pdf"
@@ -60,7 +60,7 @@ export default function DocsPage() {
             <p>
               Pekugara is a dedicated student housing platform built to connect university and college
               students in Zimbabwe with verified landlords offering affordable, nearby accommodation.
-              The name <em>Pekugara</em> comes from the Shona word meaning <em>"a place to stay"</em> —
+              The name <em>Pekugara</em> comes from the Shona word meaning <em>"a place to stay"</em>,
               and that is exactly what the platform delivers.
             </p>
             <p>
@@ -80,22 +80,22 @@ export default function DocsPage() {
               and unsafe. Pekugara solves this by:
             </p>
             <ul>
-              <li><strong>Verified listings only</strong> — every property is reviewed and approved by the Pekugara moderation team before appearing in the feed. No fake listings.</li>
-              <li><strong>Verified landlords</strong> — landlords can earn a verified badge after identity review, giving students confidence in who they are dealing with.</li>
-              <li><strong>Transparent pricing</strong> — rent prices are always displayed upfront. No hidden fees, no surprises.</li>
-              <li><strong>Direct communication</strong> — students message landlords directly through in-app chat. No third-party agents, no commissions.</li>
-              <li><strong>Safe environment</strong> — a built-in reporting and blocking system protects students from harassment or fraud.</li>
-              <li><strong>Campus proximity</strong> — listings display their distance from your university.</li>
+              <li><strong>Verified listings only</strong>: every property is reviewed and approved by the Pekugara moderation team before appearing in the feed. No fake listings.</li>
+              <li><strong>Verified landlords</strong>: landlords can earn a verified badge after identity review, giving students confidence in who they are dealing with.</li>
+              <li><strong>Transparent pricing</strong>: rent prices are always displayed upfront. No hidden fees, no surprises.</li>
+              <li><strong>Direct communication</strong>: students message landlords directly through in-app chat. No third-party agents, no commissions.</li>
+              <li><strong>Safe environment</strong>: a built-in reporting and blocking system protects students from harassment or fraud.</li>
+              <li><strong>Campus proximity</strong>: listings display their distance from your university.</li>
             </ul>
 
             <h3>For Landlords</h3>
             <ul>
-              <li><strong>Free listings</strong> — post your property to hundreds of students actively searching for housing, at no cost.</li>
-              <li><strong>Organised bookings</strong> — all viewing requests and tenant confirmations are managed in one place.</li>
-              <li><strong>Pre-qualified leads</strong> — students pay a small booking fee to confirm serious interest, reducing time-wasters.</li>
-              <li><strong>Verified badge</strong> — get a verification badge that increases student trust and improves listing visibility.</li>
-              <li><strong>Direct messaging</strong> — communicate with interested students without giving out personal contact details prematurely.</li>
-              <li><strong>Occupancy tracking</strong> — see at a glance how many spots are filled and how many are still available.</li>
+              <li><strong>Free listings</strong>: post your property to hundreds of students actively searching for housing, at no cost.</li>
+              <li><strong>Organised bookings</strong>: all viewing requests and tenant confirmations are managed in one place.</li>
+              <li><strong>Pre-qualified leads</strong>: students pay a small booking fee to confirm serious interest, reducing time-wasters.</li>
+              <li><strong>Verified badge</strong>: get a verification badge that increases student trust and improves listing visibility.</li>
+              <li><strong>Direct messaging</strong>: communicate with interested students without giving out personal contact details prematurely.</li>
+              <li><strong>Occupancy tracking</strong>: see at a glance how many spots are filled and how many are still available.</li>
             </ul>
           </section>
 
@@ -108,12 +108,12 @@ export default function DocsPage() {
               <li>Open the Pekugara app.</li>
               <li>On the Welcome screen, tap:
                 <ul>
-                  <li><strong>"Find a Room"</strong> — to register as a renter (students can optionally add their university for campus-distance search).</li>
-                  <li><strong>"List your property"</strong> — to register as a landlord.</li>
-                  <li><strong>"I already have an account"</strong> — to log in.</li>
+                  <li><strong>"Find a Room"</strong>: to register as a renter (students can optionally add their university for campus-distance search).</li>
+                  <li><strong>"List your property"</strong>: to register as a landlord.</li>
+                  <li><strong>"I already have an account"</strong>: to log in.</li>
                 </ul>
               </li>
-              <li>Fill in your details — name, email, password, and university (students) or phone number (landlords).</li>
+              <li>Fill in your details: name, email, password, and university (students) or phone number (landlords).</li>
               <li>Read and accept the <strong>Terms of Service and EULA</strong>.</li>
               <li>Tap <strong>"Create Account"</strong>.</li>
             </ol>
@@ -154,11 +154,11 @@ export default function DocsPage() {
             <h3>4.2 Advanced Search</h3>
             <p>Tap the <strong>Search</strong> tab for more powerful filtering:</p>
             <ul>
-              <li><strong>Price Range</strong> — drag the slider to set a maximum monthly rent.</li>
-              <li><strong>City</strong> — Harare, Bulawayo, Mutare, Gweru, Masvingo.</li>
-              <li><strong>University</strong> — UZ, MSU, NUST, Midlands State, Africa University.</li>
-              <li><strong>Amenities</strong> — Furnished, WiFi, Ensuite, Parking, Utilities Included.</li>
-              <li><strong>Sort By</strong> — Newest, Price Low to High, Price High to Low, Closest to Campus.</li>
+              <li><strong>Price Range</strong>: drag the slider to set a maximum monthly rent.</li>
+              <li><strong>City</strong>: Harare, Bulawayo, Mutare, Gweru, Masvingo.</li>
+              <li><strong>University</strong>: UZ, MSU, NUST, Midlands State, Africa University.</li>
+              <li><strong>Amenities</strong>: Furnished, WiFi, Ensuite, Parking, Utilities Included.</li>
+              <li><strong>Sort By</strong>: Newest, Price Low to High, Price High to Low, Closest to Campus.</li>
             </ul>
 
             <h3>4.3 Saving Listings</h3>
@@ -170,7 +170,7 @@ export default function DocsPage() {
             <h3>4.5 Booking a Viewing</h3>
             <p>Students pay a <strong>$2 USD booking fee</strong> via EcoCash to request a viewing.</p>
             <ol>
-              <li>Tap <strong>"Pay Booking Fee — $2"</strong> on the Detail screen.</li>
+              <li>Tap <strong>"Pay Booking Fee"</strong> ($2) on the Detail screen.</li>
               <li>Enter your <strong>EcoCash phone number</strong>.</li>
               <li>Tap <strong>"Send Payment Request"</strong> and approve the prompt on your phone.</li>
               <li>Once confirmed, tap <strong>"Request a Viewing"</strong> and write a short message.</li>
@@ -186,10 +186,10 @@ export default function DocsPage() {
             <h3>4.7 Messaging Landlords</h3>
             <p>Once you have paid the booking fee, tap <strong>"Message Landlord"</strong> on any listing's detail screen. All conversations are accessible from the <strong>Chats</strong> tab.</p>
 
-            <h3>4.8 Siyakwamukela AI — Your Housing Assistant</h3>
+            <h3>4.8 Siyakwamukela AI: Your Housing Assistant</h3>
             <p>
               Not sure where to start? Chat with <strong>Siyakwamukela AI</strong>, Pekugara's built-in AI housing
-              assistant. Describe what you're looking for — budget, city, university, amenities — and it will
+              assistant. Describe what you're looking for (budget, city, university, amenities) and it will
               recommend listings that match, based on your conversation.
             </p>
             <div className="docs-note">
@@ -217,10 +217,10 @@ export default function DocsPage() {
             </p>
             <ul>
               <li>If you have a confirmed booking through Pekugara, your sharing ad is <strong>verified automatically</strong> and goes live immediately.</li>
-              <li>If your place isn't booked through Pekugara, you can still post — your ad is reviewed by our team before it becomes visible to others.</li>
+              <li>If your place isn't booked through Pekugara, you can still post. Your ad is reviewed by our team before it becomes visible to others.</li>
             </ul>
             <p>
-              Messaging a sharing ad poster requires the same $2 booking fee as messaging a landlord — one payment
+              Messaging a sharing ad poster requires the same $2 booking fee as messaging a landlord. One payment
               unlocks both for 30 days.
             </p>
           </section>
@@ -321,7 +321,7 @@ export default function DocsPage() {
 
             <h3>7.3 Deleting Your Account</h3>
             <div className="docs-warning">
-              Account deletion is permanent and cannot be undone. All your data — listings, bookings, messages, and profile — will be erased.
+              Account deletion is permanent and cannot be undone. All your data (listings, bookings, messages, and profile) will be erased.
             </div>
             <p>Go to <strong>Profile → Delete Account</strong> and confirm twice in the prompts.</p>
           </section>
@@ -352,13 +352,13 @@ export default function DocsPage() {
                 { q: 'Is Pekugara free to use?', a: 'Yes. Creating an account, browsing listings, saving listings, and messaging landlords are all free. Students pay a one-time $2 USD booking fee via EcoCash to unlock viewing requests.' },
                 { q: 'Why do I need to pay a $2 booking fee?', a: 'The booking fee confirms that you are a serious student looking for accommodation. It is a one-time fee and unlocks viewing requests across all listings on the platform.' },
                 { q: 'How do I know a listing is genuine?', a: 'Every listing on Pekugara is manually reviewed and approved by our moderation team before it appears in the feed. You can also check whether the landlord has a Verified badge on their profile.' },
-                { q: 'I paid the booking fee but the listing was taken. Can I get a refund?', a: 'The $2 booking fee unlocks the ability to send viewing requests across the entire platform — it is not tied to a specific listing. It is not refundable once paid.' },
+                { q: 'I paid the booking fee but the listing was taken. Can I get a refund?', a: 'The $2 booking fee unlocks the ability to send viewing requests across the entire platform. It is not tied to a specific listing. It is not refundable once paid.' },
                 { q: 'Can a landlord see my contact details?', a: 'Your profile shows your name and university (students) or phone number (landlords) to the other party once a booking request is made. All earlier communication happens securely within the in-app chat.' },
                 { q: 'What happens if a landlord never responds to my request?', a: 'You can cancel a pending request at any time from Profile → My Viewing Requests and send a request to a different property. If a landlord is consistently unresponsive, you may report them.' },
                 { q: 'Does it cost anything to list my property as a landlord?', a: 'No. Posting listings on Pekugara is completely free for landlords.' },
                 { q: 'How long does admin approval take for a new listing?', a: 'Listings are typically reviewed within 24 hours. You will receive an in-app notification once your listing is approved and live.' },
                 { q: 'What should I do if I experience harassment?', a: 'Block the user immediately from the chat screen (⋮ menu → Block). This removes them from your feed and automatically notifies our moderation team, who will review the case within 24 hours.' },
-                { q: 'Can I use Pekugara if I am not a student?', a: 'Yes. Pekugara is open to any renter, not just students — the "I\'m a student" option during sign-up is optional and only used to unlock campus-distance search.' },
+                { q: 'Can I use Pekugara if I am not a student?', a: 'Yes. Pekugara is open to any renter, not just students. The "I\'m a student" option during sign-up is optional and only used to unlock campus-distance search.' },
                 { q: 'How does House & Room Sharing work?', a: 'If you already have accommodation and want to split rent, post a sharing ad from the Sharing tab. Ads from renters with a confirmed Pekugara booking go live instantly; ads from anyone else are reviewed by our team first. Messaging a sharing ad poster uses the same $2 booking fee as messaging a landlord.' },
               ].map(({ q, a }) => (
                 <div key={q} className="docs-faq-item">

@@ -21,7 +21,7 @@ export default function EulaPage({ onClose }) {
     {
       num: '3',
       title: 'ABUSIVE BEHAVIOUR',
-      body: 'Abusive behaviour toward other users — including harassment, bullying, threats, or repeated unsolicited contact — is strictly prohibited. We reserve the right to suspend or permanently ban any account engaged in abusive behaviour.',
+      body: 'Abusive behaviour toward other users, including harassment, bullying, threats, or repeated unsolicited contact, is strictly prohibited. We reserve the right to suspend or permanently ban any account engaged in abusive behaviour.',
     },
     {
       num: '4',

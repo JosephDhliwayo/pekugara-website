@@ -23,7 +23,7 @@ const TABS = [
     label: 'Mission',
     Icon: TargetIcon,
     title: 'Our Mission',
-    desc: 'Make student housing in Zimbabwe accessible, transparent, and safe. We believe every student deserves a secure, affordable place to stay near their university — without the stress of scattered listings and unverified landlords.',
+    desc: 'Make student housing in Zimbabwe accessible, transparent, and safe. We believe every student deserves a secure, affordable place to stay near their university, without the stress of scattered listings and unverified landlords.',
     highlight: 'Every student deserves a safe home.',
   },
   {
@@ -31,7 +31,7 @@ const TABS = [
     label: 'Vision',
     Icon: EyeIcon,
     title: 'Our Vision',
-    desc: 'Become the leading student housing platform across Southern Africa — expanding from Zimbabwe into Zambia, Mozambique, and beyond. We envision a future where finding student accommodation is as easy as ordering food online.',
+    desc: 'Become the leading student housing platform across Southern Africa, expanding from Zimbabwe into Zambia, Mozambique, and beyond. We envision a future where finding student accommodation is as easy as ordering food online.',
     highlight: 'Southern Africa\'s #1 student housing platform.',
   },
   {
@@ -45,7 +45,7 @@ const TABS = [
 ]
 
 const MILESTONES = [
-  { year: '2021', event: 'The idea is born — originally envisioned as a WhatsApp chatbot for student housing' },
+  { year: '2021', event: 'The idea is born, originally envisioned as a WhatsApp chatbot for student housing' },
   { year: '2025', event: 'Pekugara reimagined as a full mobile platform and founded in Harare' },
   { year: '2026', event: 'Launched on iOS App Store' },
   { year: '2026', event: '500+ listings across 10 cities' },
@@ -72,11 +72,11 @@ export default function About() {
           <p className="eyebrow">Our Story</p>
           <h2>Built for Zimbabwean students</h2>
 
-          <p>The idea came in 2021 — born out of frustration with how scattered student housing was across WhatsApp groups and Facebook pages. The original vision was a WhatsApp chatbot to simplify the search.</p>
+          <p>The idea came in 2021, born out of frustration with how scattered student housing was across WhatsApp groups and Facebook pages. The original vision was a WhatsApp chatbot to simplify the search.</p>
           <p>
             Years of refinement turned that chatbot idea into a full platform.
             The name <strong className="about-name">Pekugara</strong> means{' '}
-            <em className="about-em">"a place to stay"</em> in Shona —
+            <em className="about-em">"a place to stay"</em> in Shona,
             and that's exactly what we help every Zimbabwean student find.
           </p>
 

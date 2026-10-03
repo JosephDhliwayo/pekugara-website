@@ -37,7 +37,7 @@ export default function Hero({ onStoreClick }) {
           <p className="hero-sub">
             Pekugara connects Zimbabwean renters with verified landlords offering
             affordable, safe accommodation across the country. Browse listings,
-            chat with landlords, and book viewings — all in one app.
+            chat with landlords, and book viewings, all in one app.
           </p>
 
           <div className="hero-actions">

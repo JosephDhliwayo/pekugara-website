@@ -65,7 +65,7 @@ const FEATURES = [
   { Icon: SearchIcon,  title: 'Smart Search',       desc: 'Filter by city, university, price, amenities and distance to campus. Find exactly what you need in seconds.' },
   { Icon: AIIcon,      title: 'Siyakwamukela AI',   desc: 'Chat with our AI housing assistant to get personalised accommodation recommendations based on what you’re looking for.' },
   { Icon: VerifiedIcon,title: 'Verified Landlords', desc: "Every landlord goes through an identity verification process so you know who you're dealing with." },
-  { Icon: ChatIcon,    title: 'In-App Messaging',   desc: 'Chat directly with landlords, ask questions, and arrange viewings — no need to share your phone number.' },
+  { Icon: ChatIcon,    title: 'In-App Messaging',   desc: 'Chat directly with landlords, ask questions, and arrange viewings without sharing your phone number.' },
   { Icon: SharingIcon, title: 'House & Room Sharing', desc: 'Already have a place? Post a sharing ad to split rent with a roommate, or browse ads from others looking to share.' },
   { Icon: BookingIcon, title: 'Easy Bookings',      desc: 'Book a viewing with a simple $2 fee. Your booking is confirmed instantly and the landlord is notified.' },
   { Icon: SafeIcon,    title: 'Safe Community',     desc: 'Report and block abusive users. Our moderation team reviews all reports within 24 hours.' },

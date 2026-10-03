@@ -50,7 +50,7 @@ export default function TermsPage({ onClose }) {
     {
       num: '6',
       title: 'PAYMENTS & FEES',
-      body: 'The $2 USD booking fee is processed securely via Pesepay and EcoCash. This fee is non-refundable once payment has been confirmed. Pekugara does not handle rent payments between students and landlords — all rental agreements are made directly between the parties.',
+      body: 'The $2 USD booking fee is processed securely via Pesepay and EcoCash. This fee is non-refundable once payment has been confirmed. Pekugara does not handle rent payments between students and landlords. All rental agreements are made directly between the parties.',
     },
     {
       num: '7',

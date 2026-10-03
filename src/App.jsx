@@ -170,7 +170,7 @@ export default function App() {
           <DocsAnimIcon size={22} />
           <span className="docs-banner-badge">NEW</span>
           <span className="docs-banner-text">
-            <strong>User Documentation</strong> is live — learn how to use Pekugara
+            <strong>User Documentation</strong> is live. Learn how to use Pekugara
           </span>
           <span className="docs-banner-cta">
             Click me <span className="docs-banner-arrow">→</span>
